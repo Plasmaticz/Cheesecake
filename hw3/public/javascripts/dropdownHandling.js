@@ -1,4 +1,5 @@
 // dropdownHandling.js
+//Eric Su
 
 // Helper function for selecting a month from the dropdown
 function selectMonth(event) {

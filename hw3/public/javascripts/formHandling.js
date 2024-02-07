@@ -1,4 +1,5 @@
 // formHandling.js
+//Eric Su
 
 // Helper function for form submission
 function submitOrder(event) {
