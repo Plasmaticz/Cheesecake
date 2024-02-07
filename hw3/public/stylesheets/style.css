@@ -1,0 +1,55 @@
+/*Eric Su*/
+
+/* Different background for body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eba8a8;
+}
+
+/* Different background for the form */
+form {
+  background-color: #f0cece;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Using a different font for headings */
+h1, h2, h3 {
+  font-family: 'Times New Roman', serif;
+}
+
+/* Styling the submit button */
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #97ddef;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  max-height: 150px; /* Limit height */
+  overflow-y: auto; /* Enable vertical scrollbar */
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+#selectedMonth:hover + .dropdown-content {
+  display: block;
+}

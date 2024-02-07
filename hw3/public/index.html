@@ -1,0 +1,79 @@
+<!--Eric Su-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cheesecake Order Form</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- My javascript Files -->
+    <script src="javascripts/dropdownHandling.js"></script>
+    <script src="javascripts/formHandling.js"></script>
+</head>
+<body>
+
+    <h1>Cheesecake Order Form</h1>
+
+    <!--Image of Cake-->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg/480px-Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" alt="Cheesecake">
+
+    <!--Form Section-->
+    <form id="cheesecakeOrderForm" action="/submit-your-order" method="post">
+        <h3>Quantity Topping</h3>
+
+        <!--Dropdown for quantity-->
+        <label for="quantity">Quantity:</label>
+        <select name="quantity" id="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+
+        <!--Select Toppings-->
+        <table>
+            <tr>
+                <td><input type="radio" id="plain" name="topping" value="Plain"></td>
+                <td><label for="plain">Plain</label></td>
+            </tr>
+            <tr>
+                <td><input type="radio" id="cherry" name="topping" value="Cherry"></td>
+                <td><label for="cherry">Cherry</label></td>
+            </tr>
+            <tr>
+                <td><input type="radio" id="chocolate" name="topping" value="Chocolate"></td>
+                <td><label for="chocolate">Chocolate</label></td>
+            </tr>
+        </table>
+
+        <!--Special Instructions-->
+        <h3>Notes:</h3>
+        <textarea name="specialInstructions" rows="4" cols="50" placeholder="Enter any special instructions here"></textarea>
+
+        <!--Order Button-->
+        <br><br>
+        <input type="submit" value="Order">
+    </form>
+
+    <!--Order Stats with Dropdown Menu for Months-->
+    <h2>Orders for <span id="selectedMonth" style="cursor: pointer; text-decoration: underline;">Jan</span></h2>
+    <div id="monthDropdown" class="dropdown-content">
+        <a href="#" data-month="Jan">Jan</a>
+        <a href="#" data-month="Feb">Feb</a>
+        <a href="#" data-month="Mar">Mar</a>
+        <a href="#" data-month="Apr">Apr</a>
+        <a href="#" data-month="May">May</a>
+        <a href="#" data-month="Jun">Jun</a>
+        <a href="#" data-month="Jul">Jul</a>
+        <a href="#" data-month="Aug">Aug</a>
+        <a href="#" data-month="Sep">Sep</a>
+        <a href="#" data-month="Oct">Oct</a>
+        <a href="#" data-month="Nov">Nov</a>
+        <a href="#" data-month="Dec">Dec</a>
+    </div>
+    <p style="margin-left: 25px;">• 11 Cherry</p>
+    <p style="margin-left: 25px;">• 17 Chocolate</p>
+    <p style="margin-left: 25px;">• 31 Plain</p>
+
+</body>
+</html>
