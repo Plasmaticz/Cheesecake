@@ -7,6 +7,15 @@ function selectMonth(event) {
     var selectedMonth = $(this).attr("data-month");
     $("#selectedMonth").text(selectedMonth);
     $("#monthDropdown").hide(); // Hide dropdown after selection
+
+    // Issue a POST request to the server with the selected month
+    $.post('/orders', { month: selectedMonth }, function(response) {
+        var ordersSummary = '';
+        response.forEach(function(order) {
+            ordersSummary += `• ${order.quantity} ${order.topping}<br>`;
+        });
+        $('#ordersList').html(ordersSummary); 
+    });
 }
 
 $(document).ready(function(){
